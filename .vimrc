@@ -24,6 +24,9 @@ nmap <C-k> <C-w>k
 nmap <C-h> <C-w>h
 nmap <C-l> <C-w>l
 
+set splitbelow
+set splitright
+
 nnoremap / :nohl<CR>/
 
 set backspace=indent,eol,start
