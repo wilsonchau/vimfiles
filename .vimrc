@@ -61,7 +61,7 @@ if has('gui_running')
 "  let g:Powerline_colorscheme='solarized16'
   set guioptions-=r
   set guioptions-=L
-  :cd Documents/ew/galactic
+  :cd ~/Documents/ew/galactic
 else
 endif
 
