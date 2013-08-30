@@ -3,8 +3,8 @@ syntax enable
 filetype plugin indent on
 set wildignore+=*/test/*,*/log/*,*/tmp/*,*.so,*.swp,*.zip 
 set autoread
-set nocompatible
 set showcmd
+set nocompatible
 set hidden
 
 set cursorline
