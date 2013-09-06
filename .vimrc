@@ -48,7 +48,7 @@ set number
 set vb
 set mousehide
 
-au BufWritePost *.rb silent! !ctags -R &
+"au BufWritePost *.rb silent! !ctags -R &
 
 :let mapleader = ","
 
