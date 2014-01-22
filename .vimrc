@@ -21,18 +21,21 @@ set ts=2
 
 set clipboard=unnamed
 
+" navigate splits
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-h> <C-w>h
 nmap <C-l> <C-w>l
-
 set splitbelow
 set splitright
 
-nnoremap / :nohl<CR>/
+:imap jk <Esc>
+
 
 set backspace=indent,eol,start
 
+" search through current file
+nnoremap / :nohl<CR>/
 set incsearch
 set hlsearch
 set ignorecase
@@ -53,7 +56,6 @@ set mousehide
 :let mapleader = ","
 
 map \ :NERDTreeToggle<CR>
-nmap <leader>f :Ack!<space>
 
 set t_Co=256
 
@@ -62,13 +64,11 @@ if has('gui_running')
   colorscheme codeschool
   set guioptions-=r
   set guioptions-=L
-  :cd ~/Documents/ew/galactic
+  :cd ~/Documents/doa/doa
 else
 endif
 
-"indentation guide, <leader>ig to toggle
-let g:indent_guides_start_level = 2
-let g:indent_guides_guide_size = 2
-
+" search proj directory
+nmap <leader>f :Ack!<space>
 "use ag instead of ack with ack.vim
 let g:ackprg = 'ag --nogroup --nocolor --column'
