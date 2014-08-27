@@ -1,12 +1,13 @@
 execute pathogen#infect()
 syntax enable
 filetype plugin indent on
-set wildignore+=*/test/*,*/log/*,*/tmp/*,*.so,*.swp,*.zip 
+set wildignore+=*/log/*,*/tmp/*,*.so,*.swp,*.zip 
 set autoread
 set showcmd
 set nocompatible
 set hidden
 
+set relativenumber
 set cursorline
 set autoindent
 set laststatus=2
@@ -31,7 +32,6 @@ set splitright
 
 :imap jk <Esc>
 
-
 set backspace=indent,eol,start
 
 " search through current file
@@ -52,6 +52,7 @@ set vb
 set mousehide
 
 "au BufWritePost *.rb silent! !ctags -R &
+let g:rspec_runner = "os_x_iterm"
 
 :let mapleader = ","
 
@@ -61,12 +62,14 @@ set t_Co=256
 
 if has('gui_running')
   set guifont=Inconsolata-dz\ for\ Powerline:h13
-  colorscheme codeschool
+  "colorscheme codeschool
   set guioptions-=r
   set guioptions-=L
   :cd ~/Documents/doa/doa
 else
 endif
+
+colorscheme molokai
 
 " search proj directory
 nmap <leader>f :Ack!<space>
